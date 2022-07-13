@@ -4,11 +4,16 @@ pipeline {
         maven 'maven'
     }
             stages{
-                stage('Build') {
+                stage('Clean') {
                     steps {
                         bat 'mvn clean'
                     }
                 }
             }
+            stage('Build') {
+                steps {
+                    bat'mvn package'
+                }
 
+            }
 }
