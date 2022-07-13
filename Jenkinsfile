@@ -11,6 +11,7 @@ pipeline {
                 }
                 stage('Build') {
                     steps{
+                        bat 'mvn web3j:generate-sources'
                         bat'mvn package'
                     }
                 }
