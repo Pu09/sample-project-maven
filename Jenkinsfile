@@ -3,17 +3,16 @@ pipeline {
     tools{
         maven 'maven'
     }
-            stages{
+            stages {
                 stage('Clean') {
                     steps {
                         bat 'mvn clean'
                     }
                 }
-            }
-            stage('Build') {
-                steps {
-                    bat'mvn package'
-                }
+                stage('Build') {
+                    steps {
+                        bat 'mvn package'
+                    }
 
+                }
             }
-}
